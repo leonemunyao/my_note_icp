@@ -1,0 +1,23 @@
+HOW DOES ICP WORK
+
+Realizing the vision of the World Computer
+
+Learn how the Internet Computer Blockchain realizes the vision of the World Computer
+
+1 .Architecture of the Internet Computer
+The IC realizes the vision of a World Computer -an open and secure blockchain-based network that can host programs and data in form of smart contracts, perform computation on smart contracts in a secure and trustworthy way and scale infinetly.
+
+Smart Contracts on the Internet Computer are called canister smart contracts or canisters. Canisters are hosted on subnets, the top-level architectural building block of ICP. A subnet is an independent blockchain running on node machines or nodes. A single subnet can securely host tens of thousands of canister smart contract. 
+
+Canisters communicate via asynchronous messages, i.e they don't block on sending a message, but process the response when it eventually arrives.
+
+
+Overview:
+The Internet Computer is create by the Internet Computer Protocal(ICP) from which its  utility token, the ICP token derives its name. The core part of the IC Protocol, the core IC Protocol is a 4-LAYER protocol that is running on the nodes of each subnet. By running the core IC protocol, the nodes of a subnet realize a block-chain based replicated state machine that makes progress independently of the other subnets. Subnets process messages which are submitted by users or come from other subnets.The core IC protocol comprises of the following four layers from botton to top:
+
+ 1. Peer-to-peer
+ 2. Consensus
+ 3. Message routing
+ 4. Execution
+
+ The lower two layers P2P and consensus together implement a selection and ordering of incoming messages and provide messages to the upper two layers in form of blocks. The upper two layers, message routing and execution, receive blocks containing ordered messages from the lower part of the stack and execute them in a completely deterministic manner on every node of the subnet.
