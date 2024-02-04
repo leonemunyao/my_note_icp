@@ -1,0 +1,17 @@
+SETTING UP, BUILDING AND INTERACTING WITH SMART CONTRACTS ON THE INTERNET COMPUTER
+
+Introduction
+This includes setting up a development environment, understanding the necessary tools for ICP development such as Node.js, Node Version Manager and dfx and learn how to install and use them. Building and interactng with a messaging canister. Learn how to construct a simple messaging canister that performs CRUD(CREATE, READ, UPDATE and DELETE) operations. Calling the methods of a canister and handling responses.
+
+What is a Canister.
+Its a fundamental building block and execution environment for deploying and running Software Applications on the Internet Computer platform. Canisters bundle together code and state to create a secure efficient execution environment.
+
+What is Azle.
+Its a TypeScript Canister Development Kit (CDK) for the Internet Computer. Azle enables web developers to bring their TypeScript/JavaScript skills to the IC and use various npm packages and VS code intellisense
+
+
+Set_Up
+In this section its about setting up the boilerplat code for the project. By the end I should have a development environment pre-configured with all the necessary tools and dependancies.
+
+Preparation of the Terminal.
+In this section we prepare our terminal environment by installing key tools: Node Version Manager(nvm) and DFX. nvm is a usefull tool that allows the management of multiple active Node.js versions. Add DFX to your path. Now that DFX is installed, we need to add it to our new systems path. This allows us to execute DFX commands from any location within the terminal

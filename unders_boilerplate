@@ -1,0 +1,65 @@
+Understanding the Boilerplate code.
+
+The Boilerplate code prepared serves as a basic Azle project. Its designed to help get started quickly by providing the necessary configuration files and dependancies. It aslo includes a simple canister that serves as a reference for constructing for constructng my own canisters. Lets explore the key components.
+
+1. TypeScript Configuration file(tsconfig.json)
+This file sets up the TypeScript Compiler options.
+ 
+ {
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES2020",
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "moduleResolution": "node",
+        "allowJs": true,
+        "outDir": "HACK_BECAUSE_OF_ALLOW_JS",
+        "allowSyntheticDefaultImports": true
+    }
+}
+
+2. DFX Configurations file.(dfx.json)
+This file configures the json. These configuration file communicates vital aspects of the canister to the DFINITY SDK(dfx). Here we are creating the message_board canister using the Azle framework
+
+{
+  "canisters": {
+     "message_board": {
+      "type": "custom",
+      "build": "npx azle message_board",
+      "root": "src",
+      "ts": "src/index.ts",
+      "candid": "src/index.did",
+      "wasm": ".azle/message_board/message_board.wasm.gz"
+    }
+  }
+}
+
+canisters - the parent property for defining our canister 'message_board' in this case.
+message_board - the name of our canister.
+type - describes the framework or language that is used that is used in this canister. It can be Rust, Motoko or custom Azle.
+build - instructs DFX to use the Azle CLI to build the message_board canister.
+roots and ts - Direct DFX src folder and src/index.ts respectively
+candid - points DFX to our Candid file(src/index.did) an Interface Description  Language (IDL) used by the Internet Computer.
+wasm - directs DFX to our compiled WebAssembly(WASM) file.
+
+3. Package.json File.
+Manages the project metadata and dependancies.
+
+ "name": "dfinity_project",
+  "main": "index.js",
+  "dependencies": {
+    "azle": "0.16.2",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": "^12 || ^14 || ^16 || ^18"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1"
+  }
+
+  It contains information about the project such as its name, version and main file. It also lists the dependancies and devDependancies needed for the project, specifying their versions.
+
+  azle - its a framework for building decentralized applications on the Internet Computer.
+  uuid - its a popular javascript library for creating unique identifiers.
+  

@@ -1,0 +1,25 @@
+Constructing the Messaging Canister.
+
+Lets check how to construct our messaging canister. Its designed to handle the fundamental CRUD(Create, Read, Update and Delete)operations which are the key to the functioning of any data-driven application 
+
+Setting up the Directory and Entry Point.
+The src with a file index.ts is the entry point of our canister.
+
+Importing Dependancies.
+
+Add the following lines on top of the index.ts file.
+
+import { $query, $update, Record, StableBTreeMap, Vec, match, Result, nat64, ic, Opt } from 'azle';
+import { v4 as uuidv4 } from 'uuid';
+
+$query - is an annotation allowing us to retrieve information from our canister.
+$update - facilitating updates to our canister.
+Record - Type used is creating a record data structure.
+StableBTreeMap - Type used for creating map data structure.
+Vec - Type for creating vector data structure
+match - function enabling us to perform pattern matching on a result.
+Result - Type used for creating result data structure.
+nat64 - Type used for creating a 64-bit unsigned integer.
+ic - is an object that provides access to various API's of the Internet Computer.
+Opt - Type used for representing optional values in Rust/optional data structure.
+uuidv4 - function generating a unique identifier for each new message
